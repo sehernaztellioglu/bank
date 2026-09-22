@@ -1,12 +1,11 @@
 package org.example;
 
-import java.sql.SQLOutput;
 
 public class Main{
 
 
     static void bank(int x){
-        
+
         int sayacIkiyuz = 0;
         int sayacYuz = 0;
         int sayacElli = 0;
@@ -16,46 +15,32 @@ public class Main{
 
 
 
-        while (true) {
+            sayacIkiyuz = x / 200;
+            x = x%200;
 
 
-            if (x >= 200) {
-                x = x - 200;
-                sayacIkiyuz++;
+            sayacYuz = x / 100;
+            x = x%100;
 
-            }
 
-            if(200 > x && x >= 100){
-                x = x - 100;
-                sayacYuz++;
+            sayacElli = x / 50;
+            x = x%50;
 
-            }
 
-            if(100 > x && x >= 50){
-                x = x - 50;
-                sayacElli++;
+            sayacYirmi = x / 20;
+            x = x%20;
 
-            }
 
-            if(50 > x && x >= 20){
-                x = x - 20;
-                sayacYirmi++;
+            sayacOn = x / 10;
+            x = x%10;
 
-            }
 
-            if(20 > x && x >= 10){
-                x = x - 10;
-                sayacOn++;
+            sayacBes = x / 5;
+            x = x%5;
 
-            }
 
-            if(10 > x && x >= 5){
-                x = x - 5;
-                sayacBes++;
-                break;
 
-            }
-        }
+
         System.out.println("200: " + sayacIkiyuz);
         System.out.println("100: " + sayacYuz);
         System.out.println("50: " + sayacElli);
@@ -65,8 +50,8 @@ public class Main{
     }
 
 
-    public static void main(){
-            bank(1205);
+    public static void main(String[] args) {
+            bank(1285);
 
 
 
